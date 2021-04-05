@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.xworkz.injection.washingMachine.component.Motor" id="motorComponent">
+	<property name="warrantyPeriod" value="2"></property><!-- intializing setter value -->
+	
+	</bean>
+	<bean class="com.xworkz.injection.washingMachine.component.Power" id="powerComponent">
+	<constructor-arg value="true"></constructor-arg><!-- intiliazing constructor value -->
+	</bean>
+	<bean class="com.xworkz.injection.washingMachine.component.WashingMachine" id="washingMachine">
+	<constructor-arg value="samsaung"></constructor-arg>
+	<constructor-arg value="5.5"></constructor-arg>
+	<constructor-arg ref="motorComponent"></constructor-arg><!-- constructor injection -->
+	<property name="power" ref="powerComponent"></property><!-- setter injection -->
+	</bean>
+
+
+
+</beans>
