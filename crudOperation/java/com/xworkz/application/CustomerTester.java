@@ -1,18 +1,23 @@
 package com.xworkz.application;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.xworkz.application.entity.CustomerEntity;
-import com.xworkz.application.repository.CustomerRepo;
-import com.xworkz.application.repository.CustomerRepoImpl;
+
 import com.xworkz.application.service.CustomerService;
-import com.xworkz.application.service.CustomerServiceImpl;
+
 
 public class CustomerTester {
 
 	public static void main(String[] args) {
 
+		ApplicationContext container=new ClassPathXmlApplicationContext("application.xml");
+		CustomerService service=container.getBean(CustomerService.class);
 		CustomerEntity entity = new CustomerEntity("Omkar", "Banglore", 10, 678987675);
-		CustomerRepo repo = new CustomerRepoImpl();
-		CustomerService service = new CustomerServiceImpl(repo);
 		service.validateAndPersist(entity);
+		
+		
+		
 	}
 }

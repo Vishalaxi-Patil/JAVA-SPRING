@@ -18,6 +18,7 @@ import com.xworkz.application.repository.CustomerRepo;
 		System.out.println("Invoked validateAndPersist");
 		if (entity != null) {
 			System.out.println("entity is not null");
+			System.out.println("entity:"+entity);
 			this.customerRepo.persist(entity);
 		}
 		return false;

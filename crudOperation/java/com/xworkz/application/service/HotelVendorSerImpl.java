@@ -12,14 +12,17 @@ public class HotelVendorSerImpl implements HotelVendorSer{
 		this.hotelVendorRepo=hotelVendorRepo;
 	}
 
+	
+
 	@Override
-	public boolean save(HotelVendorEntity entity) {
+	public boolean ValidateAndSave(HotelVendorEntity entity) {
 		System.out.println("Invoked save");
 		if(entity!=null) {
 			System.out.println("entity is not null");
 			this.hotelVendorRepo.save(entity);
 		}
 		return false;
+		
 	}
 
 }
