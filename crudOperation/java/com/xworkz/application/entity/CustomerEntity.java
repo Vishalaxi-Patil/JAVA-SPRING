@@ -1,11 +1,28 @@
 package com.xworkz.application.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer")
+
 public class CustomerEntity {
 
+	@Id
+	@Column(name="NAME")
 	private String name;
+	@Column(name="LOCATION")
 	private String location;
+	@Column(name="RATING")
 	private int rating;
+	@Column(name="PHONE_NO")
 	private long phoneNo;
+	
+	public CustomerEntity() {
+		
+	}
 
 	public CustomerEntity(String name, String location, int rating, long phoneNo) {
 		super();

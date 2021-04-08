@@ -1,13 +1,33 @@
 package com.xworkz.application.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.xworkz.application.constant.HotelType;
 
+@Entity
+@Table(name="hotel")
 public class HotelVendorEntity {
 
+	
+	@Id
+	@Column(name="HID")
+    private int id;
+	@Column(name="NAME")
 	private String name;
+	@Column(name="LOCATION")
 	private String location;
+	@Column(name="RATING")
 	private int rating;
+	@Column(name="TYPE")
 	private HotelType type;
+	
+	
+	public HotelVendorEntity() {
+		
+	}
 
 	public HotelVendorEntity(String name, String location, int rating, HotelType type) {
 		super();

@@ -1,12 +1,26 @@
 package com.xworkz.application.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.xworkz.application.constant.FoodType;
+
+@Entity
+@Table(name="FOOD")
 
 public class FoodDelivaryEntity {
 
+	
+	@Id
+	@Column(name="NAME")
 	private String name;
+	@Column(name="PRICE")
 	private float price;
+	@Column(name="FOOD_TYPE")
 	private FoodType foodType;
+	@Column(name="QUANTITY")
 	private int qunatity;
 
 	public FoodDelivaryEntity() {
