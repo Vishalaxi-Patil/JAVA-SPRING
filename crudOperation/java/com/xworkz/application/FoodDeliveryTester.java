@@ -14,7 +14,7 @@ public class FoodDeliveryTester {
 	public static void main(String[] args) {
 
 		FoodDelivaryEntity entity = new FoodDelivaryEntity("Masala rice", 50, FoodType.SOUTH_INDIAN, 1);
-		ApplicationContext container = new ClassPathXmlApplicationContext("application-db.xml", "hibernate.cfg.xml",
+		ApplicationContext container = new ClassPathXmlApplicationContext("application-db.xml",
 				"application.xml");
 		FoodDeliveryService service = container.getBean(FoodDeliveryService.class);
 		service.validateAndSave(entity);

@@ -17,7 +17,7 @@ public class HotelVendorTester {
 
 		//HotelVendorEntity entity = new HotelVendorEntity("Taj", "Hubli", 10, HotelType.FAMILY);
         HotelVendorEntity entity1=new HotelVendorEntity("Durga","Lakshmeshwar",10,HotelType.RESORT);
-		ApplicationContext conatainer=new ClassPathXmlApplicationContext("application.xml","hibernate.cfg.xml","application-db.xml");
+		ApplicationContext conatainer=new ClassPathXmlApplicationContext("application.xml","application-db.xml");
 		HotelVendorSer ref=conatainer.getBean(HotelVendorSer.class);
 		//ref.ValidateAndSave(entity);
 		ref.ValidateAndSave(entity1);

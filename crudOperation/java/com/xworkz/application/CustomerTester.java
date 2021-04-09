@@ -12,7 +12,7 @@ public class CustomerTester {
 
 	public static void main(String[] args) {
 
-		ApplicationContext container = new ClassPathXmlApplicationContext("hibernate.cfg.xml", "application-db.xml",
+		ApplicationContext container = new ClassPathXmlApplicationContext("application-db.xml",
 				"application.xml");
 		SessionFactory sf = container.getBean(SessionFactory.class);
 		System.out.println(sf);
