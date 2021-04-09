@@ -11,6 +11,8 @@ import javax.persistence.Table;
 public class CustomerEntity {
 
 	@Id
+	@Column(name="CID")
+	private int id;
 	@Column(name="NAME")
 	private String name;
 	@Column(name="LOCATION")
@@ -32,10 +34,12 @@ public class CustomerEntity {
 		this.phoneNo = phoneNo;
 	}
 
+	
+
 	@Override
 	public String toString() {
-		return "CustomerEntity [name=" + name + ", location=" + location + ", rating=" + rating + ", phoneNo=" + phoneNo
-				+ "]";
+		return "CustomerEntity [id=" + id + ", name=" + name + ", location=" + location + ", rating=" + rating
+				+ ", phoneNo=" + phoneNo + "]";
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package com.xworkz.application.service;
 
 import com.xworkz.application.entity.FoodDelivaryEntity;
 import com.xworkz.application.repository.FoodDeliveryRepository;
+import com.xworkz.application.service.FoodDeliveryService;
 
 public class FoodDeliveryServiceImpl implements FoodDeliveryService{
 	
